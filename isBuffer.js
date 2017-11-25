@@ -3,17 +3,8 @@ define(['./_root', './stubFalse'], function(root, stubFalse) {
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Detect free variable `exports`. */
-  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-
-  /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-
-  /** Detect the popular CommonJS extension `module.exports`. */
-  var moduleExports = freeModule && freeModule.exports === freeExports;
-
   /** Built-in value references. */
-  var Buffer = moduleExports ? root.Buffer : undefined;
+  var Buffer = root.Buffer;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
